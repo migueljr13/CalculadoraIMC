@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CalculadoraIMC</string>
+    <string name="txt_idade">Idade</string>
+    <string name="txt_Masculino">Masculino</string>
+    <string name="txt_Femino">Feminino</string>
+    <string name="text_sexo">Sexo</string>
+    <string name="txt_peso">Peso</string>
+    <string name="txt_altura">Altura</string>
+    <string name="hint_zero">0</string>
+    <string name="text_calcular">Calcular</string>
+    <string name="text_limpar">Limpar</string>
+</resources>

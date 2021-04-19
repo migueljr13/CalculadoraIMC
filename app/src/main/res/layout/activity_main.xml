@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="27dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/text_limpar"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvIMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/sbAltura" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/txt_peso"
+        app:layout_constraintBottom_toTopOf="@+id/sbPeso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sbPeso"
+        android:layout_width="277dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="12dp"
+        android:valueFrom="30.0"
+        android:valueTo="150.0"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sbAltura"
+        android:layout_width="279dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="26dp"
+        android:valueFrom="1.00"
+        android:valueTo="2.20"
+        app:layout_constraintBottom_toTopOf="@+id/btnLimpar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="27dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/text_calcular"
+        app:cornerRadius="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnLimpar"
+        app:layout_constraintEnd_toStartOf="@+id/btnLimpar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="@string/txt_altura"
+        app:layout_constraintBottom_toTopOf="@+id/sbAltura"
+        app:layout_constraintEnd_toStartOf="@+id/sbPeso"
+        app:layout_constraintStart_toStartOf="@+id/sbPeso"
+        app:layout_constraintTop_toBottomOf="@+id/sbPeso" />
+
+    <TextView
+        android:id="@+id/tvIMC"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:textColor="@android:color/widget_edittext_dark"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/dataTable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLimpar"
+        tools:text="Seu IMC é : " />
+
+    <ir.androidexception.datatable.DataTable
+        android:id="@+id/dataTable"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:corner_radius="8dp"
+        app:direction="ltr"
+        app:header_background_color="#fff"
+        app:header_gravity="center"
+        app:header_horizontal_padding="0dp"
+        app:header_text_color="#000"
+        app:header_text_size="5sp"
+        app:header_vertical_padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIMC"
+        app:persian_number="false"
+        app:row_background_color="#fff"
+        app:row_gravity="center"
+        app:row_text_color="#000"
+        app:row_text_size="5sp"
+        app:row_vertical_padding="6dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
